@@ -1,0 +1,68 @@
+/* HomePage.css */
+.home-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 1rem;
+  }
+  
+  .home-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+  }
+  
+  .home-title {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    background: linear-gradient(to right, #0bc5ea, #3182ce);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 1rem;
+  }
+  
+  .products-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2.5rem;
+  }
+  
+  @media (min-width: 768px) {
+    .products-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .products-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  .empty-state {
+    font-size: 1.25rem;
+    text-align: center;
+    font-weight: bold;
+    color: #718096;
+  }
+  
+  .create-link {
+    color: #3182ce;
+    text-decoration: none;
+  }
+  
+  .create-link:hover {
+    text-decoration: underline;
+  }
+  
+  /* Dark mode support */
+  .dark-mode .empty-state {
+    color: #a0aec0;
+  }
+  
+  .dark-mode .create-link {
+    color: #63b3ed;
+  }

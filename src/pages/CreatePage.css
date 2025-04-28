@@ -1,0 +1,118 @@
+/* CreatePage.css */
+.create-page-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  .create-page-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .create-page-title {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .create-page-form {
+    width: 100%;
+    background-color: var(--bg-color);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+  }
+  
+  .form-group {
+    margin-bottom: 1rem;
+  }
+  
+  .form-input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+  }
+  
+  .form-input:focus {
+    outline: none;
+    border-color: #3182ce;
+  }
+  
+  .submit-button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #3182ce;
+    color: white;
+    border: none;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .submit-button:hover {
+    background-color: #2c5282;
+  }
+  
+  /* Toast notifications */
+  .toast {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 1rem;
+    border-radius: 0.25rem;
+    color: white;
+    z-index: 1000;
+    animation: slideIn 0.3s ease-out;
+  }
+  
+  .toast.success {
+    background-color: #38a169;
+  }
+  
+  .toast.error {
+    background-color: #e53e3e;
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Dark mode support */
+  .dark-mode .create-page-form {
+    background-color: #1a202c;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  }
+  
+  .dark-mode .form-input {
+    background-color: #2d3748;
+    border-color: #4a5568;
+    color: white;
+  }
+  
+  .dark-mode .form-input:focus {
+    border-color: #63b3ed;
+  }
+  
+  .dark-mode .submit-button {
+    background-color: #4299e1;
+  }
+  
+  .dark-mode .submit-button:hover {
+    background-color: #3182ce;
+  }

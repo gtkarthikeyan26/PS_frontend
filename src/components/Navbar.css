@@ -1,0 +1,72 @@
+/* Navbar.css */
+.navbar {
+  width: 100%;
+  padding: 0 1rem;
+  background-color: transparent;
+}
+
+.navbar-container {
+  max-width: 1140px;
+  margin: 0 auto;
+  height: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+}
+
+.navbar-logo {
+  margin: 0;
+  font-size: 1.375rem; /* 22px */
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.navbar-logo a {
+  text-decoration: none;
+  background: linear-gradient(to right, #d3d3d3, #a9a9a9); /* Light Gray to Dark Gray */
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.navbar-buttons {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.navbar-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+  border-radius: 0.25rem;
+  transition: background-color 0.2s;
+}
+
+.navbar-button:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Dark mode styles */
+.dark-mode .navbar-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive styles */
+@media (min-width: 640px) {
+  .navbar-container {
+    flex-direction: row;
+  }
+  
+  .navbar-logo {
+    font-size: 1.75rem; /* 28px */
+  }
+}
