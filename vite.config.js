@@ -12,5 +12,9 @@ export default defineConfig({
         secure: false, // 👈 Bypasses SSL verification
       },
     },
-  }
+  },
+  base: '/',
+  build: {
+    outDir: 'dist', // Vite's default build folder
+  },
 })
