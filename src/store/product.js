@@ -1,6 +1,7 @@
 import { create } from "zustand";
 import axios from "axios";
-
+const API_BASE_URL = import.meta.env.VITE_BACKEND_URL;
+console.log("[DEBUG] Backend URL:", import.meta.env.VITE_BACKEND_URL);
 export const useProductStore = create((set) => ({
   products: [],
   
@@ -16,7 +17,7 @@ export const useProductStore = create((set) => ({
       }
       
       // Axios POST request
-      const { data } = await axios.post("/api/products", newProduct);
+      const { data } = await axios.post(`${API_BASE_URL}/api/products`, newProduct);
       
       // Update local state
       set((state) => ({ products: [...state.products, data.data] }));
@@ -35,7 +36,7 @@ export const useProductStore = create((set) => ({
   fetchProducts: async () => {
     try {
       // Axios GET request
-      const { data } = await axios.get("/api/products");
+      const { data } = await axios.get(`${API_BASE_URL}/api/products`);
       
       // Update local state
       set({ products: data.data });
@@ -53,7 +54,7 @@ export const useProductStore = create((set) => ({
   deleteProduct: async (pid) => {
     try {
       // Axios DELETE request
-      const { data } = await axios.delete(`/api/products/${pid}`);
+      const { data } = await axios.delete(`${API_BASE_URL}/api/products/${pid}`);
       
       // Update UI immediately
       set((state) => ({ 
@@ -73,7 +74,7 @@ export const useProductStore = create((set) => ({
   updateProduct: async (pid, updatedProduct) => {
     try {
       // Axios PUT request
-      const { data } = await axios.put(`/api/products/${pid}`, updatedProduct);
+      const { data } = await axios.put(`${API_BASE_URL}/api/products/${pid}`, updatedProduct);
       
       // Update local state
       set((state) => ({
