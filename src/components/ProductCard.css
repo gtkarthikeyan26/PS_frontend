@@ -76,19 +76,30 @@
   }
   
   /* Modal Styles */
-  .modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1000;
-    backdrop-filter: blur(2px);
-  }
+  /* Modal Overlay Styles */
+.modal-overlay {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  backdrop-filter: blur(2px);
+  pointer-events: none; /* Disable interaction while not visible */
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* When Modal is Open */
+.modal-overlay.open {
+  pointer-events: all;
+  opacity: 1;
+}
+
+  
+
   
   .modal-content {
     background-color: var(--modal-bg);
@@ -99,6 +110,7 @@
     max-height: 90vh;
     overflow-y: auto;
     animation: modalFadeIn 0.3s ease-out;
+    pointer-events: auto;
   }
   
   .modal-header {
