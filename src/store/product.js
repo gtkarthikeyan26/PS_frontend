@@ -1,7 +1,7 @@
 import { create } from "zustand";
 import axios from "axios";
 const API_BASE_URL = import.meta.env.VITE_BACKEND_URL;
-console.log("[DEBUG] Backend URL:", import.meta.env.VITE_BACKEND_URL);
+
 export const useProductStore = create((set) => ({
   products: [],
   
