@@ -9,7 +9,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
     <nav className={darkMode ? 'dark-mode' : ''}>
       <div className="navbar-container">
         <h1 className="navbar-logo">
-          <Link to="/">The Supply Stop</Link>
+          <Link to="/">The Supply Shop</Link>
         </h1>
 
         <div className="navbar-buttons">
